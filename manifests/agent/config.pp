@@ -84,4 +84,9 @@ class puppet::agent::config {
       value   => $puppet::agent::runinterval,
     }
   }
+
+  ini_setting { 'noop':
+      setting => 'noop',
+      value   => $puppet::agent::noop_enable,
+  }
 }
